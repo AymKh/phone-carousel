@@ -20,16 +20,19 @@ main {
 
 
 #main-slide {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     img {
         height: 54vh;
         position: relative;
         top: -3.1vh;
+    }
+}
+
+#preview-slide {
+    img {
+        height: 7vh;
+        position: absolute;
+        bottom: 9vh;
+        left: 42vh;
     }
 }
 
@@ -58,6 +61,14 @@ main {
 
 
 // SHARED
+.slideMainStyling {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .flexSlide {
     width: fit-content;
     height: auto;

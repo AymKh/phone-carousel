@@ -1,7 +1,9 @@
 const mainSlideElement = document.querySelector('#main-slide');
 const imageToSlide = document.querySelector('.image-to-slide');
+const imageSlidedAlready = document.querySelector('.preview-image-slided');
 const timeToNextImage = 2000;
 let currentImageIndex = 0;
+let currentPreviewIndex = 0;
 const slideIndicatorsContainer = document.querySelector('#slide-indicators');
 const progressOverlays = document.querySelector('#progressOverlays');
 // WILL BE FED BY THE USER WHEN USING THIS PACKAGE
@@ -52,6 +54,16 @@ const autoSlide = () => {
     animatePoressBar(currentImageIndex);
 }
 
+// THIS FUNCTION HOLDS THE AUTO SLIDING IMAGES LOGIC
+// THIS WILL SHOW THE ALREADY SLIDED IMAGES IH THE LEFT BOTTOM PREVIEW BOX
+const autoSlidePreview = () => {
+    imageSlidedAlready.setAttribute('src', imagesList[currentPreviewIndex]);
+    if (currentPreviewIndex < imagesList.length - 1)
+        currentPreviewIndex++;
+    else
+        currentPreviewIndex = 0;
+}
+
 
 
 
@@ -61,9 +73,11 @@ const autoSlide = () => {
 
     // auto slide
     imageToSlide.setAttribute('src', imagesList[0]);
-
+    currentPreviewIndex = imagesList.length - 1;
+    imageSlidedAlready.setAttribute('src', imagesList[currentPreviewIndex]);
     setInterval(() => {
         autoSlide();
+        autoSlidePreview();
     }, timeToNextImage);
 
     // slide indicators
