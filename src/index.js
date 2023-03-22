@@ -2,8 +2,7 @@ const mainSlideElement = document.querySelector('#main-slide');
 const imageToSlide = document.querySelector('.image-to-slide');
 const timeToNextImage = 2000;
 let currentImageIndex = 0;
-const slideIndicatorsContainer = document.querySelector('#slide-indicators')
-
+const slideIndicatorsContainer = document.querySelector('#slide-indicators');
 // WILL BE FED BY THE USER WHEN USING THIS PACKAGE
 const imagesList = [
     '../assets/carousel-photo-01.jpg',
@@ -12,6 +11,15 @@ const imagesList = [
     '../assets/carousel-photo-04.jpg'
 ];
 
+
+
+
+
+
+// FUNCTION RESPONSIBLE FOR ANIMATING THE PROGRESS BARS
+const animatePoressBar = barIndex => {
+    const indicatorsArray = document.querySelectorAll('.indicator');
+}
 
 // THIS FUNCTION HOLDS THE AUTO SLIDING IMAGES LOGIC
 // THIS SWITCHES BETWEEN ALL AVAILABLE IMAGES BASE ON THE GIVEN
@@ -22,6 +30,7 @@ const autoSlide = () => {
         currentImageIndex++;
     else
         currentImageIndex = 0;
+    animatePoressBar(currentImageIndex);
 }
 
 
