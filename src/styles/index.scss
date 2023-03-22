@@ -1,3 +1,7 @@
+@import './shared';
+@import './sliders';
+@import './progressBar';
+
 * {
     padding: 0;
     margin: 0;
@@ -10,73 +14,11 @@ body {
 }
 
 main {
+    //phone mockup
     z-index: 10;
     position: relative;
     background-image: url('../../assets/iPhone-mokup.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-}
-
-
-#main-slide {
-    img {
-        height: 54vh;
-        position: relative;
-        top: -3.1vh;
-    }
-}
-
-#preview-slide {
-    img {
-        height: 7vh;
-        position: absolute;
-        bottom: 9vh;
-        left: 42vh;
-    }
-}
-
-#slide-indicators {
-    .indicator {
-        width: 8vh;
-        height: 0.2vh;
-        margin-right: 0.5rem;
-        border-radius: 1rem;
-        background-color: gray;
-        position: relative;
-    }
-}
-
-#progressOverlays {
-    margin-top: 1rem;
-
-    .progress {
-        width: 8vh;
-        height: 0.2vh;
-        background-color: transparent;
-    }
-}
-
-
-
-
-// SHARED
-.slideMainStyling {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flexSlide {
-    width: fit-content;
-    height: auto;
-    margin: auto;
-    margin-top: 2rem;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
