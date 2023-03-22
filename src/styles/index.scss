@@ -34,6 +34,31 @@ main {
 }
 
 #slide-indicators {
+    .indicator {
+        width: 8vh;
+        height: 0.2vh;
+        margin-right: 0.5rem;
+        border-radius: 1rem;
+        background-color: gray;
+        position: relative;
+    }
+}
+
+#progressOverlays {
+    margin-top: 1rem;
+
+    .progress {
+        width: 8vh;
+        height: 0.2vh;
+        background-color: transparent;
+    }
+}
+
+
+
+
+// SHARED
+.flexSlide {
     width: fit-content;
     height: auto;
     margin: auto;
@@ -43,23 +68,4 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    .indicator {
-        width: 8vh;
-        height: 0.2vh;
-        margin-right: 0.5rem;
-        border-radius: 1rem;
-        background-color: gray;
-        position: relative;
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 0.2vh;
-            background-color: #fff;
-            width: 50%;
-        }
-    }
 }

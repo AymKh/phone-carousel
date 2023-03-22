@@ -3,6 +3,7 @@ const imageToSlide = document.querySelector('.image-to-slide');
 const timeToNextImage = 2000;
 let currentImageIndex = 0;
 const slideIndicatorsContainer = document.querySelector('#slide-indicators');
+const progressOverlays = document.querySelector('#progressOverlays');
 // WILL BE FED BY THE USER WHEN USING THIS PACKAGE
 const imagesList = [
     '../assets/carousel-photo-01.jpg',
@@ -17,8 +18,26 @@ const imagesList = [
 
 
 // FUNCTION RESPONSIBLE FOR ANIMATING THE PROGRESS BARS
-const animatePoressBar = barIndex => {
-    const indicatorsArray = document.querySelectorAll('.indicator');
+const animatePoressBar = currentIndex => {
+    let i = 0;
+
+    if (i == 0) {
+        i = 1;
+        var progressBarArray = document.querySelectorAll('.progress');
+        progressBarArray[currentIndex].style.backgroundColor = 'yellow';
+        let width = 1;
+        var id = setInterval(animate, timeToNextImage / 100);
+
+        function animate() {
+            if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                progressBarArray[currentIndex].style.width = width + "%";
+            }
+        }
+    }
 }
 
 // THIS FUNCTION HOLDS THE AUTO SLIDING IMAGES LOGIC
@@ -50,5 +69,6 @@ const autoSlide = () => {
     // slide indicators
     for (img in imagesList) {
         slideIndicatorsContainer.innerHTML += '<div class="indicator"></div>';
+        progressOverlays.innerHTML += '<div class="progress"></div>';
     }
 })()

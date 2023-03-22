@@ -31,7 +31,25 @@ main {
   top: -3.1vh;
 }
 
-#slide-indicators {
+#slide-indicators .indicator {
+  width: 8vh;
+  height: 0.2vh;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+  background-color: gray;
+  position: relative;
+}
+
+#progressOverlays {
+  margin-top: 1rem;
+}
+#progressOverlays .progress {
+  width: 8vh;
+  height: 0.2vh;
+  background-color: transparent;
+}
+
+.flexSlide {
   width: -moz-fit-content;
   width: fit-content;
   height: auto;
@@ -41,21 +59,4 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-#slide-indicators .indicator {
-  width: 8vh;
-  height: 0.2vh;
-  margin-right: 0.5rem;
-  border-radius: 1rem;
-  background-color: gray;
-  position: relative;
-}
-#slide-indicators .indicator:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.2vh;
-  background-color: #fff;
-  width: 50%;
 }/*# sourceMappingURL=index.css.map */
