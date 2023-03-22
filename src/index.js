@@ -11,7 +11,7 @@ const imagesList = [
 ];
 
 
-const autoSlide = (_) => {
+const autoSlide = () => {
     imageToSlide.setAttribute('src', imagesList[currentImageIndex]);
     if (currentImageIndex < imagesList.length - 1)
         currentImageIndex++;
