@@ -8,10 +8,10 @@ const slideIndicatorsContainer = document.querySelector('#slide-indicators');
 const progressOverlays = document.querySelector('#progressOverlays');
 // WILL BE FED BY THE USER WHEN USING THIS PACKAGE
 const imagesList = [
-    '../assets/carousel-photo-01.jpg',
-    '../assets/carousel-photo-02.jpg',
-    '../assets/carousel-photo-03.jpg',
-    '../assets/carousel-photo-04.jpg'
+    './assets/carousel-photo-01.jpg',
+    './assets/carousel-photo-02.jpg',
+    './assets/carousel-photo-03.jpg',
+    './assets/carousel-photo-04.jpg'
 ];
 
 
