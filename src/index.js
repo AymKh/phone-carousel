@@ -1,6 +1,6 @@
 const mainSlideElement = document.querySelector('#main-slide');
 const imageToSlide = document.querySelector('.image-to-slide');
-const timeToNextImage = 1000;
+const timeToNextImage = 2000;
 let currentImageIndex = 0;
 const slideIndicatorsContainer = document.querySelector('#slide-indicators')
 
@@ -32,6 +32,8 @@ const autoSlide = () => {
 (function bootstrap() {
 
     // auto slide
+    imageToSlide.setAttribute('src', imagesList[0]);
+
     setInterval(() => {
         autoSlide();
     }, timeToNextImage);
