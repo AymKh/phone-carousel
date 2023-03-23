@@ -1,2 +1,0 @@
-# phone-carousel
-A carousel
