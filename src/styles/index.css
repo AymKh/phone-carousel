@@ -26,9 +26,9 @@
 
 #preview-slide img {
   height: 7vh;
-  position: absolute;
-  bottom: 9vh;
-  left: 42vh;
+  position: relative;
+  bottom: 56vh;
+  left: -15.7vh;
 }
 
 #slide-indicators .indicator {
